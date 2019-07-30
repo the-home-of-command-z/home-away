@@ -7,6 +7,6 @@ class Device(models.Model):
 
     url = models.CharField(max_length=200)
 
-    access_token = models.CharField
+    access_token = models.CharField(max_length=1000, null=True)
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
