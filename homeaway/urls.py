@@ -14,7 +14,6 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
 from django.urls import include
 from django.urls import path
 from django.views.generic import RedirectView
@@ -27,7 +26,14 @@ urlpatterns = [
     path('core/', include('core.urls')),
     path('', RedirectView.as_view(url='/core/', permanent=True)),
     path('accounts/', include('allauth.urls')),
+<<<<<<< HEAD
     path('api/', views.endpoint),
+=======
+    path('register_device/', views.register_device, name='register-device'),
+    path('registration_success/', views.registration_success, name='registration-success'),
+
+
+>>>>>>> origin/master
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
