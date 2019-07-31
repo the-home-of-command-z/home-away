@@ -14,8 +14,9 @@ import json
 
 @csrf_exempt
 @require_http_methods(['GET'])
-def endpoint(request, username):
-    userdata = Device.objects.filter(user=request.user)
+def endpoint(request):
+    user_id = request.headers['auth']
+    userdata = Device.objects.filter(user__username=user_id)
     datalist = list(userdata.values('url', 'access_token'))
     return HttpResponse(json.dumps(datalist))
 
