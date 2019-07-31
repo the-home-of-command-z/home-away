@@ -47,4 +47,7 @@ def register_device(request):
 def registration_success(request):
     return render(request, 'registration_success.html')
 
+def homepage(request):
+    return render(request, 'homepage.html')
+
 
