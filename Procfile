@@ -1,1 +1,1 @@
-web: gunicorn home-awaw.wsgi
+web: gunicorn home-away.wsgi
