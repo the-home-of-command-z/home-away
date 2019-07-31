@@ -9,6 +9,8 @@ from .forms import RegisterDeviceForm
 from django.contrib.auth.decorators import login_required
 from django.core import serializers
 import json
+from django.urls import reverse
+
 
 # Create your views here.
 
@@ -27,7 +29,9 @@ def register_device(request):
     if request.method == 'POST':
         form = RegisterDeviceForm(request.POST)
         if form.is_valid():
-            f = form.save()
+            device = form.save(commit=False)
+            device.user = request.user
+            device.save()
             return HttpResponseRedirect(reverse('registration-success'))
     else:
         form = RegisterDeviceForm()
