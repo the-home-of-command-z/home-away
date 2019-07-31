@@ -141,3 +141,6 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL = 'register-device'
 
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
