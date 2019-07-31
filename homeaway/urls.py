@@ -26,7 +26,7 @@ urlpatterns = [
     path('core/', include('core.urls')),
     path('', RedirectView.as_view(url='/core/', permanent=True)),
     path('accounts/', include('allauth.urls')),
-    path('api/<username>', views.endpoint),
+    path('api/', views.endpoint),
     path('register_device/', views.register_device, name='register-device'),
     path('registration_success/', views.registration_success, name='registration-success'),
 ]
