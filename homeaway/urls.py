@@ -23,12 +23,13 @@ from core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('core/', include('core.urls')),
-    path('', RedirectView.as_view(url='/core/', permanent=True)),
+    # path('core/', include('core.urls')),
+    # path('', RedirectView.as_view(url='/core/', permanent=True)),
     path('accounts/', include('allauth.urls')),
     path('api/', views.endpoint),
     path('register_device/', views.register_device, name='register-device'),
     path('registration_success/', views.registration_success, name='registration-success'),
+    path('', views.homepage, name="homepage"),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
