@@ -1,0 +1,53 @@
+AHA_Bot New User Documentation
+
+Step 1: Install Home Assistant (Hass.io) on a compatible device (such as a Raspberry Pi) in your home.
+
+	How To Do It: Look at the links below for detailed instructions.
+
+	Text Link: "Install Home Assistant"
+	https://www.home-assistant.io/getting-started/
+
+	Video Link: Home Assistant - Hass.io Beginner's Guide
+<iframe width="692" height="389" src="https://www.youtube.com/embed/qnCRcGTznXs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Why You Need This: 
+	Home Assistant is what controls your smart devices at home and allows you to send them 	commands with the Slack Bot.
+
+	Once this is complete, you should be able to visit the website 	http://hassio.local:8123 and view the Home Assistant on your local network.
+
+Step 2: Create a "Long-Lived Access Token" within Home Assistant.
+
+How To Do It:
+	Inside Home Assistant, click on your User Account in the bottom left corner, then 	scroll to the bottom of that page and click "Create Token". Save that token; you'll need 	it in step 4.
+
+Why You Need This:
+	This token is needed to authorize the Home Assistant to accept commands from the Slack 	Bot.
+
+Step 3: Configure Duck DNS, and install it as an add-on on your Home Assistant.
+
+How To Do It:
+	Go to DuckDNS.org, sign in (with Google, Github, etc.), and create a DuckDNS domain 	and DuckDNS token. Go to Home Assistant website, and under the Hass.io page, add the 	DuckDNS add-on and configure it with your DuckDNS domain and token.
+
+<iframe width="692" height="389" src="https://www.youtube.com/embed/VUTPAoB27iQ&t
+" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Why You Need This:
+	DuckDNS provides a simple way to refer to a server/router with a name that doesn't 	change, rather than just an IP address which is likely to change often.
+
+Step 4: Register on the AHA_Bot Registration Website.
+
+How To Do It:
+	Go to https://ahabot-registration.herokuapp.com/
+	Click Sign in with Slack
+	Sign in to your Slack workspace and grant access.
+	The website will prompt you to enter two fields: URL and Access Token.
+		Enter the DuckDNS domain for 'URL' (i.e. yourdomain.duckdns.org).
+		Enter the Long-Lived Access Token for 'Access token'.
+		Click Submit.
+	On the "Your registration was successful!" page, click "Add to Slack".
+	On the next page, confirm your identity and select a Slack Channel to submit and 	receive messages from the Bot.
+	
+Why You Need This:
+	This connects the Slack Bot to your Home Assistant.
+	
+Step 5: Start Using AHA_Bot in Slack!
