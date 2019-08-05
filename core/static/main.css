@@ -33,6 +33,7 @@ body{
 }
 
 
+
 .image {
     background:
         /* linear-gradient(60deg, var(--r) 62%,var(--T) 63%) 18rem 2rem / 8rem 8rem, */
@@ -52,9 +53,11 @@ body{
       font-size: 6rem;
       justify-self: center;
       width: 100%;
-      margin: 1rem;
+      margin: 3rem;
       color: rgba(250, 246, 246, 0.8);
       text-shadow: 2px 2px 3px rgba(161, 159, 159, 0.8);
+      /* color: rgba(12, 12, 12);
+      text-shadow: 2px 2px 3px rgba(231, 227, 227); */
   }
 
   .titleContainer {
@@ -80,4 +83,36 @@ body{
 
 .slackButton {
     margin-top: 1rem;
+}
+
+.registerDiv {
+    color: rgba(250, 246, 246, 0.8);
+    /* color: black; */
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px rgba(161, 159, 159, 0.8);
+    /* text-shadow: 1px 1px 2px white; */
+    margin-left: 10%;
+    margin-top: 10%;
+}
+.wut {
+    font-size: 5rem;
+}
+
+.submitButton {
+    font-size: 1rem;
+    padding: .5rem;
+}
+
+input {
+    padding-top: .5rem;
+    width: 20rem;
+}
+
+.add_to_slack {
+    margin-top: 1rem;
+}
+.registerForm {
+    text-align: end;
+    max-width: 35rem;
+    padding-right: 1rem;
 }
