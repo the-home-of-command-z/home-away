@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<p>Register Your Device</p>
-<form action='' method='post'>
+<div class="registerDiv">
+<p class="wut">Register Your Device</p>
+<form class="registerForm" action='' method='post'>
     {% csrf_token %}
     <table>
         {{ form.as_p }}
     </table>
-    <button class="f6 link dim ph3 pv2 mb2 dib white bg-dark-green">Submit</button>
+    <button class="submitButton">Submit</button>
 </form>
-
+</div>
 {% endblock %}
