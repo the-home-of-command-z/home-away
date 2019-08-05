@@ -101,6 +101,8 @@ body{
 .submitButton {
     font-size: 1rem;
     padding: .5rem;
+    border-radius: 20%;
+    color: rgba(161, 159, 159, 0.8);
 }
 
 input {
