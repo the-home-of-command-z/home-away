@@ -23,7 +23,7 @@ def endpoint(request):
     return HttpResponse(json.dumps(datalist))
 
 
-@login_required
+@login_required(login_url='/')
 def register_device(request):
     user = request.user
     if request.method == 'POST':
@@ -43,7 +43,7 @@ def register_device(request):
 
     return render(request, 'register_device.html', context)
 
-@login_required
+@login_required(login_url='/')
 def registration_success(request):
     return render(request, 'registration_success.html')
 
