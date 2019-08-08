@@ -30,6 +30,7 @@ urlpatterns = [
     path('register_device/', views.register_device, name='register-device'),
     path('registration_success/', views.registration_success, name='registration-success'),
     path('', views.homepage, name="homepage"),
+    path('help/', views.help_page, name='helppage'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 

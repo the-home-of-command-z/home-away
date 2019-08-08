@@ -49,3 +49,6 @@ def registration_success(request):
 
 def homepage(request):
     return render(request, 'homepage.html')
+
+def help_page(request):
+    return render(request, 'help.html')
