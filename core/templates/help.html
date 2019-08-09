@@ -2,85 +2,87 @@
 
 {% block content %}
 <div class="helpDiv">
+    <h1>Commands</h1>
+    <p>In general AHAbot tries to understand plain English but if you're wondering about every single thing it can do or you're having some trouble getting it to understand you we have this list of explicit commands that it will always recognize. It will only register one command per message.</p>
     <div class="helpChild">
-        <h1>General Commands</h1>
-        <h2>what_devices</h2>
+        <h2>General Commands</h2>
+        <h3>what_devices</h3>
         <p>Shows a list of devices that AHAbot can control</p>
-        <h2>how_home</h2>
+        <h3>how_home</h3>
         <p>Shows a list of all your connected smart devices and their status</p>
-        <h2>what_on</h2>
+        <h3>what_on</h3>
         <p>Shows a list of all your devices that are currently turned on</p>
-        <h2>what_off</h2>
+        <h3>what_off</h3>
         <p>Shows a list of all your devices that are currently turned off</p>
-        <h2>what_lights</h2>
+        <h3>what_lights</h3>
         <p>Shows a list of your currently connected smart lights</p>
-        <h2>what_switches</h2>
+        <h3>what_switches</h3>
         <p>Shows a list of your currently connected smart plugs/switches</p>
-        <h2>what_therm</h2>
+        <h3>what_therm</h3>
         <p>Shows a list of your currently connected smart thermostats</p>
-        <h2>what_media</h2>
+        <h3>what_media</h3>
         <p>Shows a list of your currently connected media players</p>
     </div>
     <div class="helpChild">
-        <h1>Lighting Commands</h1>
-        <h2>light_status &lt;room/label&gt; (default: living room)</h2>
+        <h2>Lighting Commands</h2>
+        <h3>light_status &lt;room/label&gt; (default: living room)</h3>
         <p>Shows whether a specified light is on or off</p>
-        <h2>light_on &lt;room/label&gt; (default: living room)</h2>
+        <h3>light_on &lt;room/label&gt; (default: living room)</h3>
         <p>Turns on a specified light</p>
-        <h2>light_off &lt;room/label&gt; (default: living room)</h2>
+        <h3>light_off &lt;room/label&gt; (default: living room)</h3>
         <p>Turns off a specified light</p>
-        <h2>light_red &lt;room/label&gt; (default: living room)</h2>
+        <h3>light_red &lt;room/label&gt; (default: living room)</h3>
         <p>Turns a specified compatible light red</p>
-        <h2>light_green &lt;room/label&gt; (default: living room)</h2>
+        <h3>light_green &lt;room/label&gt; (default: living room)</h3>
         <p>Turns a specified compatible light green</p>
-        <h2>light_blue &lt;room/label&gt; (default: living room)</h2>
+        <h3>light_blue &lt;room/label&gt; (default: living room)</h3>
         <p>Turns a specified compatible light blue</p>
-        <h2>light_white &lt;room/label&gt; (default: living room)</h2>
+        <h3>light_white &lt;room/label&gt; (default: living room)</h3>
         <p>Turns a specified compatible light white</p>
-        <h2>light_full &lt;room/label&gt; (default: living room)</h2>
+        <h3>light_full &lt;room/label&gt; (default: living room)</h3>
         <p>Sets a specified light to full brightness</p>
-        <h2>light_medium &lt;room/label&gt; (default: living room)</h2>
+        <h3>light_medium &lt;room/label&gt; (default: living room)</h3>
         <p>Sets a specified light to medium brightness</p>
-        <h2>light_low &lt;room/label&gt; (default: living room)</h2>
+        <h3>light_low &lt;room/label&gt; (default: living room)</h3>
         <p>Sets a specified light to low brightness</p>
-        <h2>light_up &lt;room/label&gt; (default: living room)</h2>
+        <h3>light_up &lt;room/label&gt; (default: living room)</h3>
         <p>Increases a specified light’s brightness by 20%</p>
-        <h2>light_down &lt;room/label&gt; (default: living room)</h2>
+        <h3>light_down &lt;room/label&gt; (default: living room)</h3>
         <p>Decreases a specified light’s brightness by 20%</p>
     </div>
     <div class="helpChild">
-        <h1>Smart switch/plug/outlet Commands</h1>
-        <h2>switch_status &lt;room/label&gt; (default: living room)</h2>
+        <h2>Smart switch/plug/outlet Commands</h2>
+        <h3>switch_status &lt;room/label&gt; (default: living room)</h3>
         <p>Shows whether a specified switch/plug is on or off</p>
-        <h2>switch_on &lt;room/label&gt; (default: living room)</h2>
+        <h3>switch_on &lt;room/label&gt; (default: living room)</h3>
         <p>Turns on a specified switch/plug</p>
-        <h2>switch_off &lt;room/label&gt; (default: living room)</h2>
+        <h3>switch_off &lt;room/label&gt; (default: living room)</h3>
         <p>Turns off a specified switch/plug</p>
     </div>
     <div class="helpChild">
-        <h1>Media Player Commands</h1>
-        <h2>media_status &lt;room/label&gt; (default: living room)</h2>
+        <h2>Media Player Commands</h2>
+        <h3>media_status &lt;room/label&gt; (default: living room)</h3>
         <p>Shows whether a specified media player is on or off</p>
-        <h2>media_play &lt;room/label&gt; (default: living room)</h2>
+        <h3>media_play &lt;room/label&gt; (default: living room)</h3>
         <p>Unpauses playback on a specified media player</p>
-        <h2>media_pause &lt;room/label&gt; (default: living room)</h2>
+        <h3>media_pause &lt;room/label&gt; (default: living room)</h3>
         <p>Pauses playback on a specified media player</p>
-        <h2>media_stop &lt;room/label&gt; (default: living room)</h2>
+        <h3>media_stop &lt;room/label&gt; (default: living room)</h3>
         <p>Stops playback on a specified media player</p>
-        <h2>volume_mute &lt;room/label&gt; (default: living room)</h2>
+        <h3>volume_mute &lt;room/label&gt; (default: living room)</h3>
         <p>Mutes the audio on a specified media player</p>
-        <h2>volume_up &lt;room/label&gt; (default: living room)</h2>
+        <h3>volume_up &lt;room/label&gt; (default: living room)</h3>
         <p>Increases the volume on a specified media player</p>
-        <h2>volume_down &lt;room/label&gt; (default: living room)</h2>
+        <h3>volume_down &lt;room/label&gt; (default: living room)</h3>
         <p>Decreases the volume on a specified media player</p>
     </div>
     <div class="helpChild">
-        <h1>Thermostat Commands</h1>
-        <h2>climate_status &lt;room/label&gt; (default: living room)</h2>
+        <h2>Thermostat Commands</h2>
+        <h3>climate_status &lt;room/label&gt; (default: living room)</h3>
         <p>PLACEHOLDER</p>
-        <h2>temperature_up &lt;room/label&gt; (default: living room)</h2>
+        <h3>temperature_up &lt;room/label&gt; (default: living room)</h3>
         <p>Increases the temperature on the specified thermostat by 1 degree F</p>
-        <h2>temperature_down &lt;room/label&gt; (default: living room)</h2>
+        <h3>temperature_down &lt;room/label&gt; (default: living room)</h3>
         <p>Decreases the temperature on the specified thermostat by 1 degree F</p>
     </div>
 </div> 
