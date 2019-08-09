@@ -16,8 +16,8 @@
 }
 
 body{
-    background: linear-gradient(to right top, #db1a1a, #db6536, #eb984b, #f7ba13, #f7ca51, #fced20);
-    background-size: 300% 150%;
+    background: linear-gradient(to right top,  #b80303, #db1a1a, #db4f36, #f58a27, #f3ab25, #e7c871, #f7e711, #fdec01);
+    background-size: 300% 400%;
     -webkit-animation: AnimationName 8s ease infinite;
     animation: AnimationName 8s ease infinite;
     background-color: #db9936;
