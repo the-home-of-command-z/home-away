@@ -75,11 +75,11 @@ def edit_registration(request, pk):
 def registration_success(request):
     return render(request, 'registration_success.html')
 
-# def homepage(request):
-#     device = get_object_or_404(Device)
-#     return render(request, 'homepage.html', {'device': device})
 def homepage(request):
-    return render(request, 'homepage.html')
+    device = get_object_or_404(Device)
+    return render(request, 'homepage.html', {'device': device})
+# def homepage(request):
+#     return render(request, 'homepage.html')
 
 def help_page(request):
     return render(request, 'help.html')
