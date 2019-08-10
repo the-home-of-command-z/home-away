@@ -76,9 +76,11 @@ def edit_registration(request, pk):
 def registration_success(request):
     return render(request, 'registration_success.html')
 
+# def homepage(request):
+#     user = get_object_or_404(User)
+#     return render(request, 'homepage.html', {'user': user})
 def homepage(request):
-    user = get_object_or_404(User)
-    return render(request, 'homepage.html', {'user': user})
+    return render(request, 'homepage.html')
 
 def help_page(request):
     return render(request, 'help.html')
