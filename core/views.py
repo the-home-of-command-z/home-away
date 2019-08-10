@@ -66,6 +66,7 @@ def edit_registration(request, pk):
 
     context = {
         'form': form,
+        'user': user,
     }
 
     return render(request, 'edit_registration.html', context)
