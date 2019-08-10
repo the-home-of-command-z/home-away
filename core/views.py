@@ -47,6 +47,7 @@ def register_device(request):
 @login_required(login_url='/')
 def edit_registration(request, pk):
     device = get_object_or_404(Device, pk=pk)
+    user = get_object_or_404(User, pk=pk)
     if request.method == 'POST':
         form = editRegistration(request.POST)
         if form.is_valid():
@@ -76,7 +77,8 @@ def registration_success(request):
     return render(request, 'registration_success.html')
 
 def homepage(request):
-    return render(request, 'homepage.html')
+    user = get_object_or_404(User)
+    return render(request, 'homepage.html', {'user': user})
 
 def help_page(request):
     return render(request, 'help.html')
