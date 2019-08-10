@@ -5,11 +5,12 @@ from django.views.decorators.csrf import csrf_exempt
 from django.forms.models import model_to_dict
 from core.models import Device
 from django.views.decorators.http import require_http_methods
-from .forms import RegisterDeviceForm
+from .forms import RegisterDeviceForm, editRegistration
 from django.contrib.auth.decorators import login_required
 from django.core import serializers
 import json
 from django.urls import reverse
+from django.shortcuts import get_object_or_404
 
 
 # Create your views here.
@@ -42,6 +43,32 @@ def register_device(request):
     }
 
     return render(request, 'register_device.html', context)
+
+@login_required(login_url='/')
+def edit_registration(request, pk):
+    device = get_object_or_404(Device, pk=pk)
+    if request.method == 'POST':
+        form = editRegistration(request.POST)
+        if form.is_valid():
+            device.url = form.cleaned_data['url']
+            device.access_token = form.cleaned_data['access_token']
+            device.save()
+            return HttpResponseRedirect(
+                reverse('registration-success'))
+
+    else:
+        form = editRegistration(
+            initial={
+                'url': device.url,
+                'access_token': device.access_token,
+
+            })
+
+    context = {
+        'form': form,
+    }
+
+    return render(request, 'edit_registration.html', context)
 
 @login_required(login_url='/')
 def registration_success(request):
