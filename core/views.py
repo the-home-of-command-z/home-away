@@ -46,27 +46,33 @@ def register_device(request):
 
 @login_required(login_url='/')
 def edit_registration(request, pk):
-    device = get_object_or_404(Device, pk=pk)
-    if request.method == 'POST':
-        form = editRegistration(request.POST)
-        if form.is_valid():
-            device.url = form.cleaned_data['url']
-            device.access_token = form.cleaned_data['access_token']
-            device.save()
-            return HttpResponseRedirect(
-                reverse('registration-success'))
+    user = get_object_or_404(User, pk=pk)
 
+    if (user == request.user):
+        device = Device.objects.filter(user=user)
+    # device = get_object_or_404(Device, pk=pk)
+        if request.method == 'POST':
+            form = editRegistration(request.POST)
+            if form.is_valid():
+                device.url = form.cleaned_data['url']
+                device.access_token = form.cleaned_data['access_token']
+                device.save()
+                return HttpResponseRedirect(
+                    reverse('registration-success'))
+
+        else:
+            form = editRegistration(
+                initial={
+                    'url': device.url,
+                    'access_token': device.access_token,
+
+                })
     else:
-        form = editRegistration(
-            initial={
-                'url': device.url,
-                'access_token': device.access_token,
-
-            })
-
+        return HttpResponseRedirect(reverse('homepage.html'))
     context = {
         'form': form,
         'device': device,
+        'user': user
     }
 
     return render(request, 'edit_registration.html', context)
