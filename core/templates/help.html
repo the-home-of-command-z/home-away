@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="helpTitle">
+    <p>All commands should contain:</p><h1 class="helpH1">@AHA_bot</h1><div></div>
+</div>
 <div class="helpDiv">
     <h1>Commands</h1>
     <p>In general AHAbot tries to understand plain English but if you're wondering about every single thing it can do or you're having some trouble getting it to understand you we have this list of explicit commands that it will always recognize. It will only register one command per message.</p>
@@ -79,7 +82,7 @@
     <div class="helpChild">
         <h2>Thermostat Commands</h2>
         <h3>climate_status &lt;room/label&gt; (default: living room)</h3>
-        <p>PLACEHOLDER</p>
+        <p>Returns the current temperature for the room colocated with the thermostat</p>
         <h3>temperature_up &lt;room/label&gt; (default: living room)</h3>
         <p>Increases the temperature on the specified thermostat by 1 degree F</p>
         <h3>temperature_down &lt;room/label&gt; (default: living room)</h3>
